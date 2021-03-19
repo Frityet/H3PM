@@ -83,6 +83,15 @@
 		<Unit filename="/Users/frityet/Documents/H3PM/H3PM/H3PM.cpp">
 			<Option target="H3PM"/>
 		</Unit>
+		<Unit filename="/Users/frityet/Documents/H3PM/H3PM/JSON/ModFile.h">
+			<Option target="H3PM"/>
+		</Unit>
+		<Unit filename="/Users/frityet/Documents/H3PM/H3PM/JSON/ModListFormat.h">
+			<Option target="H3PM"/>
+		</Unit>
+		<Unit filename="/Users/frityet/Documents/H3PM/H3PM/JSON/SingularMods.h">
+			<Option target="H3PM"/>
+		</Unit>
 		<Unit filename="/Users/frityet/Documents/H3PM/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
