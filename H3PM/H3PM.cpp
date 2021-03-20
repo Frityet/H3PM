@@ -1,11 +1,23 @@
 #include <iostream>
 #include <map>
+#include <sstream>
+#include <curl/curl.h>
 
 // For my sanity.
 using std::cout;
 using std::endl;
 
 
+
+
+
+// JSON Parser & handler
+
+#include "JSON/rapidjson/document.h"
+
+// Our headers
+
+#include "JSON/ModFile.h"
 #include "JSON/ModListFormat.h"
 
 // Map brevity codes to commands
@@ -23,7 +35,7 @@ int listMods(int argc, char* argv[])
     // TODO
     
     return 0; // Indicate success
-}
+};
 
 // Entry point
 int main(int argc, char* argv[])
