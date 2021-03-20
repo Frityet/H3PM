@@ -120,6 +120,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libcurl.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -139,7 +140,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="GetDatabase.cpp" />
     <ClCompile Include="H3PM.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GetDatabase.h" />
+    <ClInclude Include="JsonHandler.h" />
+    <ClInclude Include="JSON\ModFile.h" />
+    <ClInclude Include="JSON\ModListFormat.h" />
+    <ClInclude Include="JSON\SingularMods.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

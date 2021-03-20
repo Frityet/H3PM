@@ -11,27 +11,26 @@
 
 using namespace std;
 
-class ModFile
+struct ModFile
 {
-    public:
-        string ModID;
-        string Name;
-        string RawName;
-        vector<string> Author;
-        string Version;
-        string Description;
-        string Path;
-        string Website;
-        string Arguments;
-        vector<string> Dependencies;
-        string DelInfo;
-        vector<string> IncompatableMods;
-        string ImgLoc;
-        bool HideMod;
-        SingularMods SingularModData;
-        string FileSizeMB;
-        vector<string> DelInfoArray;
-        vector<string> InstallArgumentsArray;
+    string ModID;
+    string Name;
+    string RawName;
+    vector<string> Author;
+    string Version;
+    string Description;
+    string Path;
+    string Website;
+    string Arguments;
+    vector<string> Dependencies;
+    string DelInfo;
+    vector<string> IncompatableMods;
+    string ImgLoc;
+    bool HideMod;
+    SingularMods SingularModData;
+    string FileSizeMB;
+    vector<string> DelInfoArray;
+    vector<string> InstallArgumentsArray;
 };
 
 

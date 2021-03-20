@@ -13,10 +13,39 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\JSON">
+      <UniqueIdentifier>{1d9b7535-0db3-417e-8e74-a63eaf83b70b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Net">
+      <UniqueIdentifier>{22c00716-6541-4c86-839d-e646b70444f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Net">
+      <UniqueIdentifier>{4ff5359c-423c-43e5-bec6-f2011c1ffd9c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="H3PM.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="GetDatabase.cpp">
+      <Filter>Source Files\Net</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="JSON\ModFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="JSON\ModListFormat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="JSON\SingularMods.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="JsonHandler.h">
+      <Filter>Header Files\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="GetDatabase.h">
+      <Filter>Header Files\Net</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

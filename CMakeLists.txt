@@ -4,4 +4,16 @@ project(H3PM)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(H3PM
-        H3PM/H3PM.cpp H3PM/JSON/ModFile.h H3PM/JSON/SingularMods.h H3PM/JSON/ModListFormat.h H3PM/JSON/DeserialiseDatabase.cpp H3PM/JSON/DeserialiseDatabase.h H3PM/H3PM.cpp H3PM/H3PM.h)
+        H3PM/H3PM.cpp
+        H3PM/JSON/ModFile.h
+        H3PM/JSON/SingularMods.h
+        H3PM/JSON/ModListFormat.h
+        H3PM/JSON/rapidjson/
+        H3PM/Net/GetDatabase.cpp
+        H3PM/Net/GetDatabase.h
+        H3PM/JSON/Handler.h
+        )
+
+FIND_PACKAGE(CURL CONFIG REQUIRED)
+TARGET_LINK_LIBRARIES(H3PM PRIVATE CURL::libcurl)
+
