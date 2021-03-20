@@ -120,6 +120,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libcurl.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -144,6 +145,7 @@
   <ItemGroup>
     <ClInclude Include="JSON\ModFile.h" />
     <ClInclude Include="JSON\ModListFormat.h" />
+    <ClInclude Include="JSON\rapidjson\reader.h" />
     <ClInclude Include="JSON\SingularMods.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

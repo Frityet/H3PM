@@ -29,5 +29,8 @@
     <ClInclude Include="JSON\SingularMods.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="JSON\rapidjson\reader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
