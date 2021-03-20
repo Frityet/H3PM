@@ -10,11 +10,10 @@
 
 using namespace std;
 
-class SingularMods
+struct SingularMods
 {
-    public:
-        vector<string> OccupiesID;
-        vector<string> OccupiesName;
+    vector<string> OccupiesID;
+    vector<string> OccupiesName;
 };
 
 

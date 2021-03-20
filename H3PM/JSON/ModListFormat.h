@@ -5,7 +5,6 @@
 #ifndef H3PM_MODLISTFORMAT_H
 #define H3PM_MODLISTFORMAT_H
 
-#endif //H3PM_MODLISTFORMAT_H
 
 #include <vector>
 #include <string>
@@ -13,10 +12,11 @@
 
 using namespace std;
 
-class ModListFormat
+struct ModListFormat
 {
-    public:
-        vector<ModFile> ModList;
-        string ModListName;
-        string ModListID;
+    vector<ModFile> ModList;
+    string ModListName;
+    string ModListID;
 };
+
+#endif //H3PM_MODLISTFORMAT_H

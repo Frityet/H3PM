@@ -1,6 +1,9 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/H3PM.dir/H3PM/H3PM.cpp.o"
-  "H3PM"
+  "CMakeFiles/H3PM.dir/H3PM/H3PM.cpp.obj"
+  "CMakeFiles/H3PM.dir/H3PM/Net/GetDatabase.cpp.obj"
+  "H3PM.exe"
+  "H3PM.exe.manifest"
+  "H3PM.lib"
   "H3PM.pdb"
 )
 

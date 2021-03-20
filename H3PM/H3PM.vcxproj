@@ -140,12 +140,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="GetDatabase.cpp" />
     <ClCompile Include="H3PM.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="GetDatabase.h" />
+    <ClInclude Include="JsonHandler.h" />
     <ClInclude Include="JSON\ModFile.h" />
     <ClInclude Include="JSON\ModListFormat.h" />
-    <ClInclude Include="JSON\rapidjson\reader.h" />
     <ClInclude Include="JSON\SingularMods.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
