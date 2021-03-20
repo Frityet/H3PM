@@ -18,5 +18,5 @@ class ModListFormat
     public:
         vector<ModFile> ModList;
         string ModListName;
-        string ModListID
+        string ModListID;
 };

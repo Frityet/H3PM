@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/H3PM.dir/H3PM/H3PM.cpp.o"
+  "CMakeFiles/H3PM.dir/H3PM/JSON/DeserialiseDatabase.cpp.o"
   "H3PM"
   "H3PM.pdb"
 )

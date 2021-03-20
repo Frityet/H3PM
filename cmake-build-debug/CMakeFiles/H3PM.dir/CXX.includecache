@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/frityet/Documents/H3PM/H3PM/JSON/DeserialiseDatabase.cpp
+iostream
+-
+string
+-
+vector
+-
+curl/curl.h
+/Users/frityet/Documents/H3PM/H3PM/JSON/curl/curl.h
+DeserialiseDatabase.h
+/Users/frityet/Documents/H3PM/H3PM/JSON/DeserialiseDatabase.h
+
+/Users/frityet/Documents/H3PM/H3PM/JSON/DeserialiseDatabase.h
+string
+-
+vector
+-
+

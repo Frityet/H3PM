@@ -94,12 +94,12 @@ clean: CMakeFiles/H3PM.dir/clean
 CMakeFiles/H3PM.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/H3PM.dir/build.make CMakeFiles/H3PM.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/H3PM.dir/build.make CMakeFiles/H3PM.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/frityet/Documents/H3PM/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target H3PM"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/frityet/Documents/H3PM/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target H3PM"
 .PHONY : CMakeFiles/H3PM.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/H3PM.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/frityet/Documents/H3PM/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/frityet/Documents/H3PM/cmake-build-debug/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/H3PM.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/frityet/Documents/H3PM/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/H3PM.dir/rule
