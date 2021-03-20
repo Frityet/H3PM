@@ -13,44 +13,38 @@ using namespace std;
 
 string GetRawModList(string url)
 {
-    cout << "URL: " << url << endl;
-    CURL *web;
-    CURLcode code;
+    CURL *curl;
+    CURLcode res;
+    string readBuffer;
 
-    web = curl_easy_init();
+    //init char array (cURL is in C)
+    char *charURL;
 
-    string response;
+    charURL = &url[0];
 
-    if(web)
-    {
-        curl_easy_setopt(web, CURLOPT_URL, &url);
-        curl_easy_setopt(web, CURLOPT_NOPROGRESS, 1L);
-        curl_easy_setopt(web, CURLOPT_USERPWD, "user:pass");
-        curl_easy_setopt(web, CURLOPT_USERAGENT, "curl/7.42.0");
-        curl_easy_setopt(web, CURLOPT_MAXREDIRS, 50L);
-        curl_easy_setopt(web, CURLOPT_TCP_KEEPALIVE, 1L);
-        std::string header_string;
-        curl_easy_setopt(web, CURLOPT_WRITEFUNCTION, writeFunction);
-        curl_easy_setopt(web, CURLOPT_WRITEDATA, &response);
-        curl_easy_setopt(web, CURLOPT_HEADERDATA, &header_string);
+    cout << "URL: " << charURL << endl;
 
-        char* url;
-        long response_code;
-        double elapsed;
-        curl_easy_getinfo(web, CURLINFO_RESPONSE_CODE, &response_code);
-        curl_easy_getinfo(web, CURLINFO_TOTAL_TIME, &elapsed);
-        curl_easy_getinfo(web, CURLINFO_EFFECTIVE_URL, &url);
+    curl = curl_easy_init();
+    if(curl) {
+        curl_easy_setopt(curl, CURLOPT_URL, charURL);
+        curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
+        curl_easy_setopt(curl, CURLOPT_WRITEDATA, &readBuffer);
+        res = curl_easy_perform(curl);
+        curl_easy_cleanup(curl);
 
-        curl_easy_perform(web);
-        curl_easy_cleanup(web);
-        web = NULL;
+        std::cout << readBuffer << std::endl;
     }
-
-    return response;
+    return readBuffer;
 }
 
 size_t writeFunction(void *ptr, size_t size, size_t nmemb, std::string* data)
 {
     data->append((char*) ptr, size * nmemb);
+    return size * nmemb;
+}
+
+static size_t WriteCallback(void *contents, size_t size, size_t nmemb, void *userp)
+{
+    ((std::string*)userp)->append((char*)contents, size * nmemb);
     return size * nmemb;
 }
