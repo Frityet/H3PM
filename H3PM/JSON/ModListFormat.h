@@ -15,8 +15,8 @@ using namespace std;
 struct ModListFormat
 {
     vector<ModFile> ModList;
-    string ModListName;
-    string ModListID;
+    string          ModListName;
+    string          ModListID;
 };
 
 #endif //H3PM_MODLISTFORMAT_H

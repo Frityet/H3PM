@@ -1,4 +1,4 @@
-C:\Users\Frityet\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\203.7717.62\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_TOOLCHAIN_FILE=C:/Users/Frityet/vcpkg/scripts/buildsystems/vcpkg.cmake -G "CodeBlocks - NMake Makefiles" C:\Users\Frityet\Documents\H3PM
+"/Users/frityet/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/203.7148.70/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_TOOLCHAIN_FILE=/usr/local/Cellar/vcpkg/2020.11-1/libexec/scripts/buildsystems/vcpkg.cmake -G "CodeBlocks - Unix Makefiles" /Users/frityet/Documents/H3PM
 -- Configuring done
 -- Generating done
--- Build files have been written to: C:/Users/Frityet/Documents/H3PM/cmake-build-debug
+-- Build files have been written to: /Users/frityet/Documents/H3PM/cmake-build-debug
