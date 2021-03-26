@@ -14,9 +14,10 @@ using std::string;
 using std::vector;
 
 
-typedef struct {string Name; string Description; vector<string> Arguments; int Order;} command;
+typedef struct
+{string Name; string Description; vector<string> Arguments; int Order;} command;
 
-static command Commands[] =
+static vector<command> Commands =
 {
         {"List"   , "Lists all available commands", {"ARG 0"            , "ARG 1"}, 0},
         {"Install", "Installs the specified tool" , {"Tool to install"  , "ARG 1"}, 1},

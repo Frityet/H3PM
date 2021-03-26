@@ -7,10 +7,22 @@
 #include "JSON/DeserialiseDatabase.h"
 
 #include "H3PM.h"
+#include "Common/Commands.h"
+
+using std::cout;
+using std::endl;
+using std::string;
 
 // Entry point
 int main(int argc, char* argv[])
 {
+    // I have no clue what the fuck this means
+    for (auto & Command : Commands)
+    {
+        cout << Command.Name << endl;
+        cout << Command.Description << endl;
+    }
+
     switch (commands[argv[1]])
     {
 
