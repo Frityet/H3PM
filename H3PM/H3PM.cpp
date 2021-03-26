@@ -7,14 +7,6 @@
 #include "JSON/DeserialiseDatabase.h"
 
 #include "H3PM.h"
-#include "Common/Commands.h"
-
-
-
-std::map<std::map<string, int>(), std::string> descriptions =
-{
-
-};
 
 // Entry point
 int main(int argc, char* argv[])
@@ -37,6 +29,7 @@ int main(int argc, char* argv[])
         case 4:
             break;
     }
+
 }
 
 // Lists out the mods
