@@ -24,13 +24,13 @@ typedef struct
     int             ID;
 } command;
 
-static const vector<command> Commands =
+const vector<command> Commands =
 {
-        {"List"   , "list", "Lists all available commands", {"ARG 0", "ARG 1"}, 0},
-        {"Install", "install", "Installs the specified tool", {"Tool to install", "ARG 1"}, 1},
-        {"Remove" , "remove", "Removes the specified tool", {"Tool to uninstall", "ARG 1"}, 2},
-        {"Help"   , "help", "Help?", {"ARG 0", "ARG 1"}, 3},
-        {"Init"   , "init", "Initialisation", {"ARG 0", "ARG 1"}, 4}
+        {"List"   , "--list", "Lists all available commands", {"ARG 0", "ARG 1"}, 0},
+        {"Install", "--install", "Installs the specified tool", {"Tool to install", "ARG 1"}, 1},
+        {"Remove" , "--remove", "Removes the specified tool", {"Tool to uninstall", "ARG 1"}, 2},
+        {"Help"   , "--help", "Help?", {"ARG 0", "ARG 1"}, 3},
+        {"Init"   , "--init", "Initialisation", {"ARG 0", "ARG 1"}, 4}
 };
 
 #endif //H3PM_COMMANDS_H
