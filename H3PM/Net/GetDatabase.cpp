@@ -18,6 +18,7 @@ string GetRawModList(string url)
     string readBuffer;
 
     //init char array (cURL is in C)
+    //Side note, i have no clue why it isnt first an array
     char *charURL;
 
     charURL = &url[0];
@@ -25,7 +26,8 @@ string GetRawModList(string url)
     cout << "URL: " << charURL << endl;
 
     curl = curl_easy_init();
-    if(curl) {
+    if(curl)
+    {
         curl_easy_setopt(curl, CURLOPT_URL, charURL);
         curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, WriteCallback);
         curl_easy_setopt(curl, CURLOPT_WRITEDATA, &readBuffer);
@@ -35,12 +37,6 @@ string GetRawModList(string url)
         std::cout << readBuffer << std::endl;
     }
     return readBuffer;
-}
-
-size_t writeFunction(void *ptr, size_t size, size_t nmemb, std::string* data)
-{
-    data->append((char*) ptr, size * nmemb);
-    return size * nmemb;
 }
 
 static size_t WriteCallback(void *contents, size_t size, size_t nmemb, void *userp)

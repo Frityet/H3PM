@@ -5,6 +5,10 @@
 #ifndef H3PM_H3PM_H
 #define H3PM_H3PM_H
 
-#endif //H3PM_H3PM_H
+#include "Common/command.h"
+
+command InputToCommand(char *args[]);
 
 int listMods(int argc, char* argv[]);
+
+#endif //H3PM_H3PM_H

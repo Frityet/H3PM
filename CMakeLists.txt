@@ -12,7 +12,7 @@ add_executable(H3PM
         H3PM/Net/GetDatabase.cpp
         H3PM/Net/GetDatabase.h
         H3PM/JSON/Handler.h
-        H3PM/Common/Commands.h)
+        H3PM/Common/command.h)
 
 FIND_PACKAGE(CURL CONFIG REQUIRED)
 TARGET_LINK_LIBRARIES(H3PM PRIVATE CURL::libcurl)
