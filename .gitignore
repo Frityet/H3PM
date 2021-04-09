@@ -361,6 +361,8 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Cmake stuff
 /cmake-build-debug/CMakeFiles/H3PM.dir/CXX.includecache
 /cmake-build-debug/CMakeFiles/H3PM.dir/depend.internal
 /cmake-build-debug/CMakeFiles/H3PM.dir/embed.manifest
