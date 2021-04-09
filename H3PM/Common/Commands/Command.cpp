@@ -3,14 +3,12 @@
 //
 
 #include <iostream>
-#include "CommandProcessing.h"
+#include "Command.h"
 
 namespace H3PM
 {
     namespace Commands
     {
-
-
         command InputToCommand(char *args[])
         {
             for (const auto &Command : CommandList)

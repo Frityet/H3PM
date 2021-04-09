@@ -5,6 +5,6 @@
 #ifndef H3PM_H3PM_H
 #define H3PM_H3PM_H
 
-#include "Common/Commands/command.h"
+#include "Common/Commands/Command.h"
 
 #endif //H3PM_H3PM_H

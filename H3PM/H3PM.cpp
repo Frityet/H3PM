@@ -1,11 +1,9 @@
 // Our headers
 
 #include <iostream>
-#include "JSON/DeserialiseDatabase.h"
 
 #include "H3PM.h"
-#include "Common/Commands/command.h"
-#include "Common/Commands/CommandProcessing.h"
+#include "Common/Commands/Command.h"
 
 
 namespace H3PM
@@ -14,9 +12,7 @@ namespace H3PM
     {
         std::cout << "H3PM v1" << std::endl;
 
-
-
-        command cmd = Commands::InputToCommand(argv);
+        Commands::command cmd = Commands::InputToCommand(argv);
         string *cmdInfo;
         cmdInfo = Commands::GetCommandInfo(cmd);
 
