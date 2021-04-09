@@ -9,8 +9,15 @@
 
 #include <string>
 
-std::string GetRawModList(std::string url);
+namespace H3PM
+{
+    namespace Net
+    {
 
-size_t writeFunction(void *ptr, size_t size, size_t nmemb, std::string* data);
+        std::string GetRawModList(std::string url);
 
-static size_t WriteCallback(void *contents, size_t size, size_t nmemb, void *userp);
+        size_t writeFunction(void *ptr, size_t size, size_t nmemb, std::string *data);
+
+        static size_t WriteCallback(void *contents, size_t size, size_t nmemb, void *userp);
+    }
+}

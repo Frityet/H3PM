@@ -1,34 +1,34 @@
 // Our headers
 
 #include <iostream>
-#include "JSON/ModListFormat.h"
 #include "JSON/DeserialiseDatabase.h"
 
 #include "H3PM.h"
-#include "Common/command.h"
+#include "Common/Commands/command.h"
+#include "Common/Commands/CommandProcessing.h"
 
-// Entry point
-int main(int argc, char* argv[])
+
+namespace H3PM
 {
-    std::cout << "H3PM v1" << std::endl;
-    command cmd = InputToCommand(argv);
-
-    std::cout << cmd.Name << std::endl;
-}
-
-
-command InputToCommand(char *args[])
-{
-    for (const auto & Command : Commands)
+    int main(int argc, char *argv[])
     {
-        if (args[1] == Command.CommandName)
+        std::cout << "H3PM v1" << std::endl;
+
+
+
+        command cmd = Commands::InputToCommand(argv);
+        string *cmdInfo;
+        cmdInfo = Commands::GetCommandInfo(cmd);
+
+        for (int i = 0; i < cmdInfo->size(); ++i)
         {
-            return Command;
+            std::cout << cmdInfo[i] << std::endl;
         }
-        else
-        {
-            std::cout << args[1] << std::endl;
-            std::cout << Command.CommandName << std::endl;
-        }
+
+
+
+        return 0;
     }
+
 }
+

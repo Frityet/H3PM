@@ -24,7 +24,7 @@ typedef struct
     int             ID;
 } command;
 
-const vector<command> Commands =
+static const vector<command> CommandList =
 {
         {"List"   , "--list", "Lists all available commands", {"ARG 0", "ARG 1"}, 0},
         {"Install", "--install", "Installs the specified tool", {"Tool to install", "ARG 1"}, 1},
