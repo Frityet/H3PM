@@ -17,30 +17,32 @@ using std::vector;
 
 namespace H3PM
 {
-    namespace Commands
+    namespace Common
     {
-        typedef struct
+        namespace Commands
         {
-            string Name;
-            string CommandName;
-            string Description;
-            vector<string> Arguments;
-            int ID;
-        } command;
+            typedef struct
+            {
+                string Name;
+                string CommandName;
+                string Description;
+                vector<string> Arguments;
+                int ID;
+            } command;
 
-        static const vector<command> CommandList =
-                {
-                        {"List",    "--list",    "Lists all available commands", {"ARG 0",             "ARG 1"}, 0},
-                        {"Install", "--install", "Installs the specified tool",  {"Tool to install",   "ARG 1"}, 1},
-                        {"Remove",  "--remove",  "Removes the specified tool",   {"Tool to uninstall", "ARG 1"}, 2},
-                        {"Help",    "--help",    "Help?",                        {"ARG 0",             "ARG 1"}, 3},
-                        {"Init",    "--init",    "Initialisation",               {"ARG 0",             "ARG 1"}, 4}
-                };
+            static const vector<command> CommandList =
+                    {
+                            {"List",    "--list",    "Lists all available commands", {"ARG 0",             "ARG 1"}, 0},
+                            {"Install", "--install", "Installs the specified tool",  {"Tool to install",   "ARG 1"}, 1},
+                            {"Remove",  "--remove",  "Removes the specified tool",   {"Tool to uninstall", "ARG 1"}, 2},
+                            {"Help",    "--help",    "Help?",                        {"ARG 0",             "ARG 1"}, 3},
+                            {"Init",    "--init",    "Initialisation",               {"ARG 0",             "ARG 1"}, 4}
+                    };
 
+            extern command InputToCommand(char *args[]);
 
-        command InputToCommand(char *args[]);
-
-        string *GetCommandInfo(const command &cmd);
+            extern string *GetCommandInfo(const command &cmd);
+        }
     }
 }
 

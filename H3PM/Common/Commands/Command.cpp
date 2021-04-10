@@ -7,51 +7,49 @@
 
 namespace H3PM
 {
-    namespace Commands
+    namespace Common
     {
-        command InputToCommand(char *args[])
+        namespace Commands
         {
-            for (const auto &Command : CommandList)
+            command InputToCommand(char *args[])
             {
-                if (args[1] == nullptr)
+                for (const auto &Command : CommandList)
                 {
-                    std::cout << "NULL ARGUMENT" << std::endl;
-                    return CommandList[0];
+                    if (args[1] == nullptr)
+                    {
+                        std::cout << "NULL ARGUMENT" << std::endl;
+                        return CommandList[0];
 
+                    }
+
+                    if (args[1] == Command.CommandName)
+                    {
+                        return Command;
+                    }
                 }
-
-                if (args[1] == Command.CommandName)
-                {
-                    return Command;
-                }
-                else
-                {
-                    std::cout << args[1] << std::endl;
-                    std::cout << Command.CommandName << std::endl;
-                    return CommandList[0];
-                }
-            }
-        }
-
-        string *GetCommandInfo(const command &cmd)
-        {
-            static string infoLines[5];
-
-            infoLines[0] = "Name: " + cmd.Name;
-            infoLines[1] = "Command: " + cmd.CommandName;
-            infoLines[2] = "Description: " + cmd.Description;
-
-            infoLines[3] = "Arguments: ";
-
-            for (const auto &arg : cmd.Arguments)
-            {
-                infoLines[3] += arg + " | ";
+                return CommandList[0];
             }
 
-            infoLines[4] = &"ID: "[cmd.ID];
 
-            return infoLines;
+            string *GetCommandInfo(const command &cmd)
+            {
+                static string infoLines[5];
+
+                infoLines[0] = "Name: " + cmd.Name;
+                infoLines[1] = "Command: " + cmd.CommandName;
+                infoLines[2] = "Description: " + cmd.Description;
+
+                infoLines[3] = "Arguments: ";
+
+                for (const auto &arg : cmd.Arguments)
+                {
+                    infoLines[3] += arg + " | ";
+                }
+
+                infoLines[4] = &"ID: "[cmd.ID];
+
+                return infoLines;
+            }
         }
-
     }
 }
